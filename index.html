@@ -1,0 +1,1818 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguir Play - Impulsione Sua Visibilidade nas Redes Sociais</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+       /* ======= VARIÁVEIS E RESET ======= */
+:root {
+    --primary-color: #a435f0;
+    --secondary-color: #FF5757;
+    --accent-color: #FF6B6B;
+    --dark-bg: #f5f5f7;
+    --card-bg: white;
+    --gradient: linear-gradient(135deg, #a435f0, #8B5CF6);
+    --orange-color: #ff7c0a;
+    --text-color: #333333;
+    --text-dark: #111111;
+    --text-light: #666666;
+    --focus-outline: 3px solid rgba(164, 53, 240, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ======= ACESSIBILIDADE ======= */
+:focus {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+}
+
+/* ======= ESTILOS BASE ======= */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.4;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* ======= HEADER E NAVEGAÇÃO ======= */
+.header {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: block;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.logo {
+    height: 40px;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    filter: brightness(0) saturate(100%) invert(80%) sepia(70%) saturate(1000%) hue-rotate(360deg) brightness(110%) contrast(110%);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.signup-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ======= SEÇÃO HERO ======= */
+.hero {
+    min-height: auto;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(145deg, #a435f0, #8B5CF6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    text-align: left;
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+    max-width: 50%;
+    padding: 3px;
+    margin: 0;
+}
+
+.hero-text h1 {
+    font-size: clamp(2rem, 4.5vw, 2.7rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+    letter-spacing: -0.01em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.hero-text p {
+    font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+    line-height: 1.5;
+    margin-bottom: 25px;
+    max-width: 100%;
+    word-wrap: break-word;
+    opacity: 0.9;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    display: block;
+}
+
+.hero-image:hover img {
+    transform: scale(1.03);
+}
+
+/* ======= BOTÕES DE CTA ======= */
+.cta-buttons {
+    display: flex;
+    gap: 18px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+}
+
+.cta-primary {
+    background-color: #ff5757;
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(255, 87, 87, 0.4);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    letter-spacing: 0.01em;
+    border: none;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cta-primary:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(255, 87, 87, 0.5);
+    background-color: #ff4242;
+}
+
+.cta-secondary {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.cta-special {
+    background: linear-gradient(45deg, #ff5757, #ff3d3d);
+    animation: pulse 2s infinite;
+    transform-origin: center;
+}
+
+.cta-highlighted {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff5757, #ff3d3d);
+    color: white;
+    text-decoration: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 15px 30px rgba(255, 87, 87, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: pulse 2s infinite;
+    text-align: center;
+    border: none;
+    margin: 20px auto;
+}
+
+.cta-highlighted:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(255, 87, 87, 0.4);
+}
+
+/* ======= SEÇÃO DE DUAS COLUNAS ======= */
+.two-columns-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 20px 0;
+    margin: 0;
+}
+
+.two-columns-text {
+    flex: 1;
+    text-align: left;
+    max-width: 550px;
+    padding: 3px;
+    margin: 0;
+}
+
+.two-columns-text h2 {
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--text-color);
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    padding: 0;
+    margin: 0;
+}
+
+.two-columns-text p {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: var(--text-light);
+    padding: 0;
+    margin: 0;
+}
+
+.two-columns-image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 320px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.03);
+    border-radius: 15px;
+}
+
+.two-columns-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    display: block;
+}
+
+.two-columns-image:hover img {
+    transform: scale(1.03);
+}
+
+/* ======= SEÇÃO LARANJA ======= */
+.orange-section {
+    background-color: var(--orange-color);
+    color: white;
+    padding: 60px 0;
+    margin: 0;
+}
+
+.orange-section h2 {
+    color: white;
+}
+
+.orange-section p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ======= CARDS DE SERVIÇOS ======= */
+.services {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    margin: 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+    position: relative;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    padding: 0;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255,255,255,0.2);
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: rgba(255,255,255,0.3);
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    z-index: 2;
+}
+
+.service-card:hover::after {
+    transform: scaleX(1);
+}
+
+.service-icon-wrapper {
+    position: relative;
+    margin-bottom: 0;
+    height: 240px;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.service-icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.service-icon-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: 20px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 3px;
+    margin: 0;
+}
+
+.service-card i {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover i {
+    transform: scale(1.1);
+}
+
+.service-card i:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(164, 53, 240, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover i:before {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(164, 53, 240, 0.15);
+}
+
+.service-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    transition: color 0.3s ease;
+    padding: 0;
+}
+
+.service-card:hover h3 {
+    color: var(--primary-color);
+}
+
+.service-card p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    flex-grow: 1;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+.service-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    background-color: rgba(164, 53, 240, 0.08);
+    border-radius: 30px;
+    border: 1px solid rgba(164, 53, 240, 0.2);
+    margin-top: auto;
+}
+
+.service-link:hover {
+    color: white;
+    letter-spacing: 0.5px;
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(164, 53, 240, 0.25);
+}
+
+/* ======= SEÇÃO DE BLOG ======= */
+.blog {
+    padding: 0;
+    margin: 0;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    margin-top: 40px;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.05);
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.03);
+    border-radius: 15px;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: rgba(0,0,0,0.1);
+}
+
+.blog-card-image {
+    position: relative;
+    overflow: hidden;
+    height: 240px;
+}
+
+.blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    display: block;
+}
+
+.blog-card:hover img {
+    transform: scale(1.05);
+}
+
+.blog-content {
+    padding: 3px;
+    margin: 0;
+}
+
+.blog-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    font-weight: 700;
+    transition: color 0.3s ease;
+    line-height: 1.3;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-card:hover h3 {
+    color: var(--primary-color);
+}
+
+.blog-card p {
+    font-size: 1.05rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    flex-grow: 1;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+.blog-link {
+    margin-top: auto;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+}
+
+.blog-link::after {
+    content: '→';
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.blog-link:hover {
+    color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255, 87, 87, 0.2);
+}
+
+.blog-link:hover::after {
+    transform: translateX(8px);
+}
+
+/* ======= FOOTER ======= */
+.footer {
+    background-color: #141414;
+    color: white;
+    padding: 70px 0 30px;
+    margin: 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-column {
+    padding: 3px;
+    margin: 0;
+}
+
+.footer-column h3 {
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.95rem;
+    padding: 2px 0;
+    display: inline-block;
+}
+
+.footer-column a:hover {
+    color: white;
+    transform: translateX(3px);
+}
+
+.copyright {
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* ======= PRELOADER ======= */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(164, 53, 240, 0.2);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s linear infinite;
+}
+
+/* ======= ANIMAÇÕES ======= */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 87, 87, 0.7);
+        transform: scale(1);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(255, 87, 87, 0);
+        transform: scale(1.03);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 87, 87, 0);
+        transform: scale(1);
+    }
+}
+
+/* Aplicação de animações */
+.hero-text h1,
+.hero-text p,
+.cta-buttons,
+.section-header,
+.service-card,
+.blog-card,
+.two-columns-text,
+.two-columns-image {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-text h1 { animation-delay: 0.2s; }
+.hero-text p { animation-delay: 0.4s; }
+.cta-buttons { animation-delay: 0.6s; }
+
+.service-card:nth-child(1) { animation-delay: 0.2s; }
+.service-card:nth-child(2) { animation-delay: 0.4s; }
+.service-card:nth-child(3) { animation-delay: 0.6s; }
+.service-card:nth-child(4) { animation-delay: 0.8s; }
+
+.blog-card:nth-child(1) { animation-delay: 0.2s; }
+.blog-card:nth-child(2) { animation-delay: 0.4s; }
+.blog-card:nth-child(3) { animation-delay: 0.6s; }
+
+/* ======= CARREGAMENTO DE IMAGENS ======= */
+img {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* ======= MEDIA QUERIES ======= */
+@media screen and (max-width: 1200px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .hero-content {
+        gap: 30px;
+    }
+
+    .hero-text {
+        max-width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        position: relative !important;
+        background-color: var(--primary-color);
+        padding: 10px 0 !important;
+        height: auto !important;
+        margin-bottom: 0 !important;
+        display: block !important;
+    }
+    
+    .logo {
+        height: 35px !important;
+        margin: 0 auto !important;
+        display: block !important;
+    }
+    
+    .hero {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        padding-top: 0 !important;
+    }
+
+    .hero-text {
+        padding-top: 5px !important;
+        order: 2 !important;
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .hero-image {
+        order: 1 !important;
+    }
+    
+    .hero-text h1 {
+        padding-top: 5px !important;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .two-columns-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .two-columns-text {
+        max-width: 100%;
+        text-align: center;
+        order: 1;
+    }
+
+    .two-columns-image {
+        order: 2;
+        margin-top: 20px;
+    }
+
+    /* Ajuste para cards de serviço */
+    .service-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service-card-image {
+        order: 2;
+        margin-top: 15px;
+        position: relative;
+    }
+
+    .service-content {
+        order: 1;
+        padding: 20px 20px 10px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* Estilos para blog cards em mobile */
+    .blog-card {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .blog-card-image {
+        order: 2;
+        margin-top: 15px;
+        height: 180px;
+    }
+
+    .blog-card-image img {
+        border-radius: 0 0 8px 8px !important;
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+    }
+
+    .blog-content {
+        order: 1;
+        padding: 20px 20px 10px;
+    }
+    
+    .blog-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .logo {
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 80px 0 40px;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(1.8rem, 4vw, 2.2rem);
+    }
+
+    .hero-text p {
+        font-size: clamp(1rem, 1.5vw, 1.1rem);
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cta-primary, .cta-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .service-card {
+        padding: 0;
+    }
+    
+    .service-content {
+        padding: 25px 20px 10px;
+    }
+    .service-card-image {
+        height: 200px;
+    }
+    .service-card-image img {
+        border-radius: 8px 8px 0 0;
+    }
+    .service-card-image img {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .service-content {
+        padding: 25px 20px 10px;
+    }
+
+    .service-card-image {
+        height: 200px;
+    }
+
+    .service-card-image img {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .service-card-image img {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .service-content {
+        padding: 25px 20px 10px;
+    }
+
+    .service-card-image {
+        height: 200px;
+    }
+
+    .service-card-image img {
+        border-radius: 8px 8px 0 0;
+    }
+    .service-content {
+        padding: 25px 20px 10px;
+    }
+    .service-card-image img {
+        border-radius: 0 0 8px 8px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .blog-card {
+        margin: 0 10px;
+    }
+
+    .logo {
+        height: 30px;
+    }
+}
+
+/* ======= SEÇÃO HEADER ======= */
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+.section-header p {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    color: var(--text-light);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ======= FAQ SECTION ======= */
+.faq-section {
+    padding: 0;
+    margin: 0;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ======= ESTILOS PARA IMAGENS DE FUNDO ======= */
+.bg-gradient {
+    background: var(--gradient);
+}
+
+.bg-orange {
+    background-color: var(--orange-color);
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+/* ======= UTILIDADES ======= */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-primary {
+    color: var(--primary-color);
+}
+
+.text-secondary {
+    color: var(--secondary-color);
+}
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.py-0 { padding-top: 0; padding-bottom: 0; }
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-5 { padding-top: 3rem; padding-bottom: 3rem; }
+
+.px-0 { padding-left: 0; padding-right: 0; }
+.px-1 { padding-left: 0.25rem; padding-right: 0.25rem; }
+.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
+.px-3 { padding-left: 1rem; padding-right: 1rem; }
+.px-4 { padding-left: 1.5rem; padding-right: 1.5rem; }
+.px-5 { padding-left: 3rem; padding-right: 3rem; }
+
+/* ======= ESTILOS PARA DESKTOP ESPECÍFICOS ======= */
+@media screen and (min-width: 1025px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .hero-content {
+        min-height: 600px;
+        padding: 60px 0;
+    }
+    
+    .hero-text {
+        padding-right: 40px;
+    }
+    
+    .hero-image img {
+        max-height: 500px;
+        object-fit: contain;
+    }
+    
+    .two-columns-content {
+        min-height: 500px;
+        padding: 80px 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+    
+    .blog-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 60px;
+    }
+    
+    /* Melhorias de espaçamento para desktop */
+    .section-header {
+        margin-bottom: 60px;
+    }
+    
+    .service-card {
+        padding: 0;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    
+    .service-content {
+        padding: 30px;
+    }
+    
+    .blog-card {
+        border-radius: 20px;
+    }
+    
+    .blog-content {
+        padding: 30px;
+    }
+    
+    /* Efeitos de hover mais pronunciados para desktop */
+    .service-card:hover,
+    .blog-card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+    
+    .cta-primary:hover,
+    .cta-secondary:hover,
+    .cta-highlighted:hover {
+        transform: translateY(-7px) scale(1.05);
+    }
+    
+    /* Melhorias de acessibilidade para desktop */
+    .service-link:focus,
+    .blog-link:focus,
+    .cta-primary:focus,
+    .cta-secondary:focus {
+        outline: var(--focus-outline);
+        outline-offset: 3px;
+    }
+}
+
+/* ======= AJUSTES PARA TELAS GRANDES ======= */
+@media screen and (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.25rem;
+    }
+    
+    .two-columns-text h2 {
+        font-size: 2.5rem;
+    }
+    
+    .two-columns-text p {
+        font-size: 1.2rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.6rem;
+    }
+    
+    .service-card p {
+        font-size: 1.1rem;
+    }
+    
+    .blog-card h3 {
+        font-size: 1.7rem;
+    }
+    
+    .blog-card p {
+        font-size: 1.1rem;
+    }
+}
+
+/* ======= AJUSTES DE PERFORMANCE ======= */
+/* Otimizações para animações */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .hero-text h1,
+    .hero-text p,
+    .cta-buttons,
+    .section-header,
+    .service-card,
+    .blog-card,
+    .two-columns-text,
+    .two-columns-image {
+        opacity: 1;
+        animation: none;
+    }
+    
+    .cta-special {
+        animation: none;
+    }
+}
+
+/* ======= AJUSTES DE IMPRESSÃO ======= */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .header, .footer, .cta-buttons, .preloader {
+        display: none;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .hero, .services, .two-columns, .blog, .orange-section {
+        padding: 20px 0;
+        margin: 20px 0;
+        page-break-inside: avoid;
+    }
+    
+    .hero-content, .two-columns-content {
+        display: block;
+    }
+    
+    .hero-text, .two-columns-text {
+        max-width: 100%;
+    }
+    
+    .services-grid, .blog-grid {
+        display: block;
+    }
+    
+    .service-card, .blog-card {
+        margin-bottom: 20px;
+        page-break-inside: avoid;
+    }
+    
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="https://www.seguirplay.com">
+                <img src="https://seguirplay.com/web_assets/img/logo.png" alt="Seguir Play Logo" class="logo">
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>GANHE NOVOS SEGUIDORES E AUMENTE AS SUAS CURTIDAS NAS REDES SOCIAIS!</h1>
+                    <p>Mais visibilidade. Mais autoridade. Presença digital de verdade.</p>
+                    <div class="cta-buttons">
+                        <a href="https://www.seguirplay.com" class="cta-primary" style="background: linear-gradient(45deg, #ff5757, #ff3d3d); animation: pulse 2s infinite;">Quero aumentar meu alcance nas redes sociais</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://tse4.mm.bing.net/th?id=OIG2.faFbiJ5ljsj_Jq4XKOSG&pid=ImgGn" alt="Pessoa com métricas e engajamento nas redes sociais" style="max-width: 100%; border-radius: 15px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Canais Atendidos -->
+    <section class="two-columns">
+        <div class="container">
+            <div class="two-columns-content">
+                <div class="two-columns-image">
+                    <img src="https://tse4.mm.bing.net/th?id=OIG1.hgb2VWZIpvzNwn2NbEbH&pid=ImgGn" alt="Pessoa com métricas e engajamento nas redes sociais" style="max-width: 100%; border-radius: 15px;">
+                </div>
+                <div class="two-columns-text">
+                    <h2>ESTAMOS ONDE O SEU PÚBLICO ESTÁ</h2>
+                    <p>A Seguir Play trabalha com visibilidade estratégica nas principais redes sociais onde seu público está presente.</p>
+                    <div class="cta-buttons">
+                        <a href="https://www.seguirplay.com" class="cta-primary" style="background-color: var(--orange-color);">Ver soluções por canal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços por rede social -->
+    <section class="services" style="background: linear-gradient(135deg, #833AB4, #FD1D1D, #FCAF45); color: white; padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">CANAIS ATENDIDOS</h2>
+                <p style="color: rgba(255, 255, 255, 0.9);">Escolha a rede social que deseja potencializar</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Instagram Feed">
+                    </div>
+                    <div class="service-content">
+                        <h3>Instagram</h3>
+                        <p>Alcance, engajamento e autoridade</p>
+                        <a href="https://www.seguirplay.com" class="service-link">Ver solução</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="https://cdn.qwenlm.ai/output/0cc50847-d64c-43d3-9c10-b24b4adb4ee9/t2i/d023828b-0fc9-4378-8a15-5bba2a87fdb4/f87ed958-e397-4622-ad9b-7f527ec8bbd4.png?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMGNjNTA4NDctZDY0Yy00M2QzLTljMTAtYjI0YjRhZGI0ZWU5IiwicmVzb3VyY2VfaWQiOiJmODdlZDk1OC1lMzk3LTQ2MjItYWQ5Yi03ZjUyN2VjOGJiZDQiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.iXuGJaDV3lGnA8Wk9dyeUywTJcVE-MaFylXEVkkr1X0" alt="Logo do TikTok">
+                    </div>
+                    <div class="service-content">
+                        <h3>TikTok</h3>
+                        <p>Viralização e expansão orgânica assistida</p>
+                        <a href="https://www.seguirplay.com" class="service-link">Ver solução</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="https://cdn.qwenlm.ai/output/0cc50847-d64c-43d3-9c10-b24b4adb4ee9/t2i/9214dc5b-f31a-4035-9e32-357305e2e35a/efc86c1b-83b3-41b5-ba99-391ea5bd6e8b.png?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMGNjNTA4NDctZDY0Yy00M2QzLTljMTAtYjI0YjRhZGI0ZWU5IiwicmVzb3VyY2VfaWQiOiJlZmM4NmMxYi04M2IzLTQxYjUtYmE5OS0zOTFlYTViZDZlOGIiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.koh7y603nMDQtQqxLBaiMKH-TTv_Tmo6q-vdu4gfeb8" alt="Logo do YouTube">
+                    </div>
+                    <div class="service-content">
+                        <h3>YouTube</h3>
+                        <p>Tempo de exibição e destaque nos algoritmos</p>
+                        <a href="https://www.seguirplay.com" class="service-link">Ver solução</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="https://cdn.qwenlm.ai/output/0cc50847-d64c-43d3-9c10-b24b4adb4ee9/t2i/7ae9142e-3193-49ad-b00a-2f2a1bd6e22f/9c5929c7-cc05-4a27-9893-a84ffb3d8fee.png?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMGNjNTA4NDctZDY0Yy00M2QzLTljMTAtYjI0YjRhZGI0ZWU5IiwicmVzb3VyY2VfaWQiOiI5YzU5MjljNy1jYzA1LTRhMjctOTg5My1hODRmZmIzZDhmZWUiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.1eMTY3UZwEsJv6ARbJqtfG_ED27xjTwsdWYEse2pVz0" alt="Logo do Facebook">
+                    </div>
+                    <div class="service-content">
+                        <h3>Facebook</h3>
+                        <p>Relevância para páginas, posts e negócios locais</p>
+                        <a href="https://www.seguirplay.com" class="service-link">Ver solução</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Como Funciona -->
+    <section class="orange-section">
+        <div class="container">
+            <div class="two-columns-content">
+                <div class="two-columns-text">
+                    <h2>COMO FUNCIONA A SEGUIR PLAY</h2>
+                    <p>Uma solução simples, estratégica e segura para quem quer crescer com consistência.</p>
+                    <ul style="text-align: left; color: white; margin-bottom: 20px; list-style-position: inside;">
+                        <li>Você escolhe a rede e o tipo de conteúdo a ser impulsionado</li>
+                        <li>Nosso sistema direciona sua visibilidade para perfis reais</li>
+                        <li>Usamos IA e redes parceiras para ampliar o alcance com segurança</li>
+                        <li>Você ganha relevância e autoridade sem depender de sorte</li>
+                    </ul>
+                    <div class="cta-buttons">
+                        <a href="https://www.seguirplay.com" class="cta-primary" style="background-color: #9333EA;">Conhecer processo</a>
+                    </div>
+                </div>
+                <div class="two-columns-image">
+                    <img src="https://cdn.qwenlm.ai/output/0cc50847-d64c-43d3-9c10-b24b4adb4ee9/t2i/fdba8dbb-d8cc-40d6-930a-0859f5de7483/5c7c193a-f528-429e-b4b6-6fa7264a18cd.png?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMGNjNTA4NDctZDY0Yy00M2QzLTljMTAtYjI0YjRhZGI0ZWU5IiwicmVzb3VyY2VfaWQiOiI1YzdjMTkzYS1mNTI4LTQyOWUtYjRiNi02ZmE3MjY0YTE4Y2QiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.SBft6IiV3_Ukvn6uDEOTsNb32gcbVFOQz2jl3SrvTmg" alt="Pessoa com métricas de crescimento nas redes sociais" style="border-radius: 10px; max-width: 100%;" onerror="this.src='https://placehold.co/600x400/a435f0/white?text=Seguir+Play';">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="services" style="background-color: #4CAF50; color: white; padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">BENEFÍCIOS DE USAR A SEGUIR PLAY</h2>
+                <p style="color: rgba(255, 255, 255, 0.9);">Crescimento real e sustentável para sua presença digital</p>
+            </div>
+            <div class="services-grid" style="position: relative;">
+                <div class="service-card" style="background-color: white; color: var(--text-color); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="service-card-image">
+                        <img src="https://tse4.mm.bing.net/th?id=OIG2.faFbiJ5ljsj_Jq4XKOSG&pid=ImgGn" alt="Pessoa com métricas de crescimento nas redes sociais" style="width: 100%; border-radius: 8px 8px 0 0; margin-bottom: 15px;" onerror="this.src='https://placehold.co/600x400/a435f0/white?text=Seguir+Play';">
+                    </div>
+                    <div class="service-content">
+                        <i class="fas fa-chart-line" style="color: #4CAF50;"></i>
+                        <h3>Aumento de alcance</h3>
+                        <p>Visibilidade orgânica assistida</p>
+                        <a href="https://www.seguirplay.com" class="service-link">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="service-card" style="background-color: white; color: var(--text-color); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="service-card-image">
+                        <img src="https://tse3.mm.bing.net/th?id=OIG4.a2SQB.stBtQvts0dFTri&pid=ImgGn" alt="Pessoa com métricas de crescimento nas redes sociais" style="width: 100%; border-radius: 8px 8px 0 0; margin-bottom: 15px;" onerror="this.src='https://placehold.co/600x400/a435f0/white?text=Seguir+Play';">
+                    </div>
+                    <div class="service-content">
+                        <i class="fas fa-shield-alt" style="color: #4CAF50;"></i>
+                        <h3>Crescimento seguro</h3>
+                        <p>Alinhado com o algoritmo</p>
+                        <a href="https://www.seguirplay.com" class="service-link">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="service-card" style="background-color: white; color: var(--text-color); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="service-card-image">
+                        <img src="https://tse4.mm.bing.net/th?id=OIG3.yW.Lhsz8yREQtGVduqOU&pid=ImgGn" alt="Pessoa com métricas e engajamento nas redes sociais" style="width: 100%; border-radius: 8px 8px 0 0; margin-bottom: 15px;" onerror="this.src='https://placehold.co/600x400/a435f0/white?text=Seguir+Play';">
+                    </div>
+                    <div class="service-content">
+                        <i class="fas fa-users" style="color: #4CAF50;"></i>
+                        <h3>Suporte completo</h3>
+                        <p>Para diferentes redes e perfis</p>
+                        <a href="https://www.seguirplay.com" class="service-link">Saiba mais</a>
+                    </div>
+                </div>
+                <div class="service-card" style="background-color: white; color: var(--text-color); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <div class="service-card-image">
+                        <img src="https://tse3.mm.bing.net/th?id=OIG4.LmsGyt0VnErnqDGsWG_N&pid=ImgGn" alt="Pessoa com métricas e engajamento nas redes sociais" style="width: 100%; border-radius: 8px 8px 0 0; margin-bottom: 15px;" onerror="this.src='https://placehold.co/600x400/a435f0/white?text=Seguir+Play';">
+                    </div>
+                    <div class="service-content">
+                        <i class="fas fa-check-circle" style="color: #4CAF50;"></i>
+                        <h3>Zero bots</h3>
+                        <p>100% estratégia, zero riscos</p>
+                        <a href="https://www.seguirplay.com" class="service-link">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para quem é -->
+    <section class="blog" style="background-color: #000000; color: white; padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">PARA QUEM É</h2>
+                <p style="color: rgba(255, 255, 255, 0.9);">Soluções personalizadas para diferentes perfis</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.1);">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Criador de conteúdo celebrando métricas de engajamento" onerror="this.src='https://placehold.co/600x400/a435f0/white?text=Criadores+de+Conteudo';">
+                    </div>
+                    <div class="blog-content" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);">
+                        <h3 style="color: white;">Criadores de conteúdo</h3>
+                        <p style="color: rgba(255, 255, 255, 0.8);">Que querem destravar o crescimento e alcançar mais visualizações.</p>
+                        <a href="https://www.seguirplay.com" class="blog-link" style="color: #ff5757; background: rgba(255, 87, 87, 0.15); padding: 10px 20px; border-radius: 30px; font-weight: 700; display: inline-block; width: 100%; text-align: center; margin-top: 15px; border: 1px solid rgba(255, 87, 87, 0.3); transition: all 0.3s ease;">Ver solução <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.1);">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1560439514-e960a3ef5019?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Equipe de empresa celebrando aumento de seguidores" onerror="this.src='https://placehold.co/600x400/a435f0/white?text=Empresas';">
+                    </div>
+                    <div class="blog-content" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);">
+                        <h3 style="color: white;">Pequenas e médias empresas</h3>
+                        <p style="color: rgba(255, 255, 255, 0.8);">Que precisam de visibilidade digital para aumentar seus resultados.</p>
+                        <a href="https://www.seguirplay.com" class="blog-link" style="color: #ff5757; background: rgba(255, 87, 87, 0.15); padding: 10px 20px; border-radius: 30px; font-weight: 700; display: inline-block; width: 100%; text-align: center; margin-top: 15px; border: 1px solid rgba(255, 87, 87, 0.3); transition: all 0.3s ease;">Ver solução <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card" style="background-color: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.1);">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Profissional feliz olhando para métricas de crescimento no telefone" onerror="this.src='https://placehold.co/600x400/a435f0/white?text=Profissionais';">
+                    </div>
+                    <div class="blog-content" style="background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);">
+                        <h3 style="color: white;">Profissionais e especialistas</h3>
+                        <p style="color: rgba(255, 255, 255, 0.8);">Que desejam construir autoridade e expandir sua rede de contatos.</p>
+                        <a href="https://www.seguirplay.com" class="blog-link" style="color: #ff5757; background: rgba(255, 87, 87, 0.15); padding: 10px 20px; border-radius: 30px; font-weight: 700; display: inline-block; width: 100%; text-align: center; margin-top: 15px; border: 1px solid rgba(255, 87, 87, 0.3); transition: all 0.3s ease;">Ver solução <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botão de chamada para ação principal da seção -->
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://www.seguirplay.com" class="cta-highlighted">QUERO AUMENTAR MINHA VISIBILIDADE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="two-columns" style="background-color: #3b5998; color: white;">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">DÚVIDAS FREQUENTES</h2>
+                <p style="color: rgba(255, 255, 255, 0.9);">Tudo o que você precisa saber sobre nossos serviços</p>
+            </div>
+            <div class="two-columns-content" style="margin-bottom: 30px;">
+                <div class="two-columns-image">
+                    <img src="https://cdn.qwenlm.ai/output/0cc50847-d64c-43d3-9c10-b24b4adb4ee9/t2i/06c95f9a-4fac-48fc-acf1-99a099b72eac/0dafdff1-dd76-4aa0-a6d0-8c741f9d7f64.png?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMGNjNTA4NDctZDY0Yy00M2QzLTljMTAtYjI0YjRhZGI0ZWU5IiwicmVzb3VyY2VfaWQiOiIwZGFmZGZmMS1kZDc2LTRhYTAtYTZkMC04Yzc0MWY5ZDdmNjQiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.mCf3TIm4WbKBcdD0o2CMK8Gxz1H91LojLC1WAjRWTd4" alt="Pessoa com dúvidas sobre crescimento nas redes sociais" style="border-radius: 10px; max-width: 100%;" onerror="this.src='https://placehold.co/600x400/3b5998/white?text=Dúvidas+Frequentes';">
+                </div>
+                <div class="faq-list" style="flex: 1;">
+                    <div class="service-card" style="text-align: left; margin-bottom: 15px; background-color: white; color: var(--text-color);">
+                        <h3>📌 Isso infringe as políticas das redes sociais?</h3>
+                        <p>Não. Trabalhamos com estratégias que respeitam as diretrizes das plataformas, com foco em visibilidade e engajamento real.</p>
+                    </div>
+                    <div class="service-card" style="text-align: left; margin-bottom: 15px; background-color: white; color: var(--text-color);">
+                        <h3>📌 É seguro para meu perfil ou canal?</h3>
+                        <p>Sim! Nada de bots ou automações agressivas. A visibilidade vem de ações humanas e segmentadas.</p>
+                    </div>
+                    <div class="service-card" style="text-align: left; margin-bottom: 15px; background-color: white; color: var(--text-color);">
+                        <h3>📌 É só para quem tem muitos seguidores?</h3>
+                        <p>De jeito nenhum! A Seguir Play é feita tanto para quem está começando quanto para quem já tem audiência, mas quer escalar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-buttons" style="margin-top: 30px; justify-content: center;">
+                <a href="https://www.seguirplay.com" class="cta-primary" style="background-color: white; color: #3b5998; font-weight: 700;">Ver todas as dúvidas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="two-columns" style="background-color: var(--primary-color); color: white;">
+        <div class="container">
+            <div class="two-columns-content" style="max-width: 1000px; margin: 0 auto;">
+                <div class="two-columns-text" style="max-width: 550px;">
+                    <h2 style="color: white; font-weight: 800; font-size: 2.5rem; margin-bottom: 25px; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">VOCÊ JÁ TEM O CONTEÚDO. NÓS TEMOS A ESTRATÉGIA.</h2>
+                    <p style="color: white; margin: 20px 0; font-size: 1.3rem; line-height: 1.7; font-weight: 500; letter-spacing: 0.01em;">Crescer nas redes sociais hoje exige mais do que postar todos os dias. Deixe a Seguir Play cuidar da sua visibilidade enquanto você foca no que faz de melhor: criar.</p>
+                    <div class="cta-buttons">
+                        <a href="https://www.seguirplay.com" class="cta-primary cta-special" style="font-size: 1.1rem; padding: 18px 35px;">Quero impulsionar meu crescimento digital com segurança</a>
+                    </div>
+                </div>
+                <div class="two-columns-image" style="max-width: 400px;">
+                    <img src="https://images.unsplash.com/photo-1542300058-8ed8021b823c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Pessoa comemorando métricas de crescimento nas redes sociais" style="border-radius: 10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Redes Sociais</h3>
+                    <ul>
+                        <li><a href="https://www.seguirplay.com">Instagram</a></li>
+                        <li><a href="https://www.seguirplay.com">Facebook</a></li>
+                        <li><a href="https://www.seguirplay.com">TikTok</a></li>
+                        <li><a href="https://www.seguirplay.com">YouTube</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Sobre</h3>
+                    <ul>
+                        <li><a href="https://www.seguirplay.com">Quem Somos</a></li>
+                        <li><a href="https://www.seguirplay.com">Nossa Estratégia</a></li>
+                        <li><a href="https://www.seguirplay.com">Política de Privacidade</a></li>
+                        <li><a href="https://www.seguirplay.com">Termos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><a href="https://www.seguirplay.com">Fale Conosco</a></li>
+                        <li><a href="https://www.seguirplay.com">Suporte</a></li>
+                        <li><a href="https://www.seguirplay.com">Perguntas Frequentes</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Seguir Play. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para melhorar a experiência do usuário -->
+    <script>
+        // Carregamento progressivo de imagens
+        document.addEventListener('DOMContentLoaded', function() {
+            // Gerenciar preloader
+            const preloader = document.querySelector('.preloader');
+            
+            // Função para esconder o preloader
+            function hidePreloader() {
+                preloader.classList.add('hidden');
+                
+                // Remove o preloader do DOM após a animação
+                setTimeout(() => {
+                    preloader.remove();
+                }, 500);
+            }
+            
+            // Esconde o preloader quando a página estiver carregada
+            window.addEventListener('load', hidePreloader);
+            
+            // Esconde o preloader após 3 segundos, mesmo que a página não tenha carregado completamente
+            setTimeout(hidePreloader, 3000);
+            
+            // Seleciona todas as imagens da página
+            const images = document.querySelectorAll('img');
+            
+            // Adiciona tratamento de erro para todas as imagens
+            images.forEach(img => {
+                // Adiciona tratamento de erro para imagens quebradas
+                img.onerror = function() {
+                    // Define uma imagem de fallback para caso a imagem não carregue
+                    this.src = 'https://placehold.co/600x400/a435f0/white?text=Seguir+Play';
+                    this.alt = 'Imagem alternativa Seguir Play';
+                    this.classList.add('loaded'); // Para manter a consistência visual
+                    console.log('Erro ao carregar imagem:', this.src);
+                };
+                
+                // Verifica se a imagem já está carregada
+                if (img.complete) {
+                    img.classList.add('loaded');
+                } else {
+                    // Se não estiver, adiciona um listener para esperar o carregamento
+                    img.onload = function() {
+                        this.classList.add('loaded');
+                    };
+                }
+            });
+            
+            // Cria um observador para detectar quando as imagens entram na viewport
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    // Quando a imagem entrar na viewport
+                    if (entry.isIntersecting) {
+                        const image = entry.target;
+                        
+                        // Garante que a imagem seja carregada apenas se ainda não estiver
+                        if (!image.classList.contains('loaded')) {
+                            // Para imagens Bing, adiciona query param para evitar cache
+                            if (image.src.includes('bing.net')) {
+                                const originalSrc = image.src;
+                                image.src = originalSrc + (originalSrc.includes('?') ? '&' : '?') + 'cacheBust=' + new Date().getTime();
+                            }
+                            
+                            // Para de observar esta imagem uma vez que foi carregada
+                            observer.unobserve(image);
+                        }
+                    }
+                });
+            });
+            
+            // Observa todas as imagens
+            images.forEach(img => {
+                imageObserver.observe(img);
+            });
+            
+            // Força recarregamento de imagens específicas do Bing que podem ter problemas
+            const bingImages = document.querySelectorAll('img[src*="bing.net"]');
+            bingImages.forEach(img => {
+                const originalSrc = img.src;
+                setTimeout(() => {
+                    img.src = originalSrc + (originalSrc.includes('?') ? '&' : '?') + 'reload=' + new Date().getTime();
+                }, 500);
+            });
+
+            // Suaviza o scroll para links de âncoras
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+            
+            // Adicionar efeitos de hover para botões
+            const buttons = document.querySelectorAll('.cta-primary, .cta-secondary, .service-link, .blog-link');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-3px)';
+                    this.style.boxShadow = '0 8px 20px rgba(0,0,0,0.15)';
+                });
+                
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
