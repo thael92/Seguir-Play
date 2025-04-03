@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguir Play - Aumente sua audiência na Twitch</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #9146ff;
+            --secondary-color: #6441a5;
+            --text-color: #ffffff;
+            --dark-bg: #0e0e10;
+            --twitch-gradient: linear-gradient(135deg, #9146ff, #6441a5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542751371-abadd798b93a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            background: var(--twitch-gradient);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+
+        /* Seções de Conteúdo */
+        .section {
+            padding: 80px 0;
+            background: var(--dark-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            background: var(--twitch-gradient);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: rgba(255,255,255,0.05);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .cta-final {
+        background: linear-gradient(45deg, #9146ff, #6441a5, #392e5c);
+        background-size: 200% 200%;
+        animation: gradient 15s ease infinite;
+        padding: 80px 0;
+    }
+
+    .cta-content {
+        text-align: center;
+        padding: 40px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    .glow-text {
+        font-size: 3.5rem;
+        color: white;
+        text-shadow: 0 0 10px rgba(145, 70, 255, 0.8);
+        margin-bottom: 30px;
+    }
+
+    .pulse-box {
+        animation: pulse 2s infinite;
+    }
+
+    .cta-button-special {
+        display: inline-block;
+        padding: 20px 40px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(90deg, #9146ff, #6441a5);
+        border-radius: 50px;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        margin-top: 30px;
+    }
+
+    .cta-button-special:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(145, 70, 255, 0.5);
+    }
+
+    .shine {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+            120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent
+        );
+        animation: shine 3s infinite;
+    }
+
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.02); }
+        100% { transform: scale(1); }
+    }
+
+    @keyframes shine {
+        to {
+            left: 200%;
+        }
+    }
+
+        /* Responsividade */
+        @media (max-width: 1024px) {
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <a href="https://www.seguirplay.com">
+            <img src="https://seguirplay.com/web_assets/img/logo.png" alt="Seguir Play Logo" class="logo loaded">
+        </a>
+    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Chegue a mais espectadores e valorize sua presença na Twitch</h1>
+                    <p>Melhore o desempenho das suas transmissões ao vivo com técnicas seguras e direcionadas que ampliam sua visibilidade na plataforma.</p>
+                    <a href="https://seguirplay.com/" class="cta-button"> Quero aumentar meu alcance na Twitch</a>
+                </div>
+                <div class="hero-image">
+                    <img src="img/kawai.jpg" alt="Streamer na Twitch" style="width: 500px; border-radius: 10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O que a Seguir Play faz por você -->
+    <section class="section" id="servicos">
+        <div class="container">
+            <div class="section-title">
+                <h2>O que a Seguir Play faz por você</h2>
+                <p>Ajudamos streamers a ganharem relevância com estratégias personalizadas para Twitch</p>
+            </div>
+            <div class="services-layout">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Aumento de Alcance</h3>
+                        <p>Ampliamos o alcance das suas transmissões ao vivo</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Audiência Qualificada</h3>
+                        <p>Conectamos você com espectadores realmente interessados</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Crescimento Acelerado</h3>
+                        <p>Estratégias para escalar rapidamente seu canal</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Monetização</h3>
+                        <p>Apoio no processo de monetização e parceria</p>
+                    </div>
+                </div>
+                <div class="services-image">
+                    <img src="img/streamer-setup.jpg" alt="Setup Profissional de Streamer" class="floating-image">
+                </div>
+            </div>
+            <div class="cta-wrapper">
+                <a href="https://www.seguirplay.com" class="cta-button">✨ Começar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section class="section" id="como-funciona">
+        <div class="container">
+            <div class="section-title">
+                <h2>Como Funciona</h2>
+                <p>Estratégias inteligentes para impulsionar sua visibilidade</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Estratégia Personalizada</h3>
+                    <p>Análise detalhada do seu conteúdo e público</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-magic"></i>
+                    <h3>Otimização Inteligente</h3>
+                    <p>Técnicas para melhorar seu posicionamento</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>Métricas em Tempo Real</h3>
+                    <p>Acompanhamento constante dos resultados</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://www.seguirplay.com" class="cta-button">🎯 Criar Minha Estratégia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem Pode se Beneficiar -->
+    <section class="section" id="beneficiarios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Quem Pode se Beneficiar</h2>
+                <p>Nossa solução é ideal para diversos perfis de streamers</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Streamers Iniciantes</h3>
+                    <p>Ganhe visibilidade desde o primeiro momento</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Canais em Crescimento</h3>
+                    <p>Acelere seu desenvolvimento na plataforma</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Streamers Experientes</h3>
+                    <p>Potencialize ainda mais seus resultados</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://www.seguirplay.com" class="cta-button">🌟 Quero Fazer Parte</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Perguntas Frequentes</h2>
+            </div>
+            <div class="faq-item">
+                <h3>🚫 Isso viola as regras da Twitch?</h3>
+                <p>Não. Nossos métodos respeitam integralmente os termos da plataforma.</p>
+            </div>
+            <div class="faq-item">
+                <h3>🔐 Meu canal está seguro?</h3>
+                <p>Totalmente. Trabalhamos com técnicas 100% seguras e orgânicas.</p>
+            </div>
+            <div class="faq-item">
+                <h3>📈 Funciona para iniciantes?</h3>
+                <p>Sim! Ajudamos streamers a conquistarem seus primeiros seguidores.</p>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://www.seguirplay.com" class="cta-button">💡 Tirar Minhas Dúvidas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="section cta-final" id="cta-final">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="glow-text">Transforme Suas Lives Agora</h2>
+                <div class="pulse-box">
+                    <p>Comece a crescer de forma inteligente e segura</p>
+                    <a href="https://www.seguirplay.com" class="cta-button-special">
+                        🚀 Quero Impulsionar Meu Canal
+                        <span class="shine"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: var(--dark-bg); padding: 20px 0; text-align: center;">
+        <p>© 2024 Seguir Play. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

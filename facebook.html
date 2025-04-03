@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguir Play - Mais visibilidade no Facebook</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<style>
+/* Estilos para a landing page de uma dobra do Facebook */
+:root {
+    --primary-color: #1877f2; /* Azul do Facebook */
+    --secondary-color: #42b72a; /* Verde do Facebook */
+    --text-color: #ffffff;
+    --dark-bg: #18191a; /* Fundo escuro do modo noturno do Facebook */
+    --facebook-gradient: linear-gradient(135deg, #1877f2, #0d47a1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--dark-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos da landing page */
+.landing-hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--dark-bg);
+    position: relative;
+    overflow: hidden;
+    border-top: none !important;
+}
+
+.landing-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(24, 119, 242, 0.1) 0%, rgba(13, 71, 161, 0.1) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.logo {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    z-index: 10;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    display: inline-block;
+}
+
+.landing-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.landing-text {
+    flex: 1;
+    padding-right: 15px;
+    max-width: 550px;
+}
+
+.landing-text h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 5px;
+    background: var(--facebook-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 10px rgba(24, 119, 242, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.landing-text p {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    opacity: 0.9;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.landing-image {
+    flex: 1;
+    position: relative;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.landing-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+}
+
+.landing-image:hover img {
+    transform: translateY(-10px);
+}
+
+/* CTA Button */
+.cta-wrapper {
+    margin-top: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(66, 183, 42, 0.3);
+    letter-spacing: 0.5px;
+    text-align: center;
+    z-index: 1;
+}
+
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #3aa520;
+    z-index: -1;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(66, 183, 42, 0.4);
+}
+
+.cta-button:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+/* Social Proof */
+.social-proof {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 10px 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.landing-image .social-proof {
+    position: relative;
+    margin-top: 10px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 5;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #FFD700;
+    font-size: 1.1rem;
+}
+
+.rating span {
+    color: white;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.social-proof p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+/* Thought Bubbles */
+.thought-bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.thought {
+    position: absolute;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: floatThought 3s ease-in-out infinite;
+    animation-delay: calc(var(--delay) * 0.5s);
+    color: white;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.thought i {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.thought.likes {
+    top: 10%;
+    left: 15%;
+    background: linear-gradient(135deg, #1877f2, #166fe5);
+    --delay: 1;
+}
+
+.thought.comments {
+    top: 20%;
+    right: 10%;
+    background: linear-gradient(135deg, #42b72a, #36a420);
+    --delay: 2;
+}
+
+.thought.shares {
+    bottom: 25%;
+    left: 10%;
+    background: linear-gradient(135deg, #1877f2, #166fe5);
+    --delay: 3;
+}
+
+.thought.followers {
+    bottom: 15%;
+    right: 20%;
+    background: linear-gradient(135deg, #42b72a, #36a420);
+    --delay: 4;
+}
+
+.thought.audience {
+    top: 40%;
+    left: 30%;
+    background: linear-gradient(135deg, #1877f2, #166fe5);
+    --delay: 5;
+}
+
+@keyframes floatThought {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05);
+    }
+}
+
+/* Seção O Que Fazemos */
+.section {
+    padding: 15px 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.section-text {
+    flex: 1;
+    padding-right: 10px;
+    max-width: 550px;
+}
+
+.section-text h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+    line-height: 1.2;
+    color: white;
+}
+
+.section-text p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    background: var(--facebook-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.feature-card p {
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+/* Footer Mini */
+.footer-mini {
+    text-align: center;
+    padding: 15px 0;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    z-index: 10;
+}
+
+.footer-mini a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-mini a:hover {
+    color: var(--secondary-color);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    section {
+        padding: 15px 0;
+    }
+    
+    .landing-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .landing-text p {
+        font-size: 1rem;
+    }
+    
+    .section-text h2 {
+        font-size: 2rem;
+    }
+    
+    .section-text p {
+        font-size: 1rem;
+    }
+    
+    .landing-content, .section-content {
+        padding: 5px 0;
+        gap: 10px;
+    }
+    
+    .final-cta .cta-button {
+        font-size: 1.2rem;
+        padding: 14px 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    section {
+        padding: 10px 0;
+    }
+    
+    .landing-content, .section-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+    
+    .landing-text, .section-text {
+        padding-right: 0;
+        max-width: 100%;
+        order: 1;
+    }
+    
+    .landing-image, .section-image {
+        order: 2;
+        margin-top: 5px;
+    }
+    
+    .cta-wrapper {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .final-cta {
+        padding: 20px 0;
+    }
+    
+    .final-cta .cta-button {
+        font-size: 1.1rem;
+        padding: 12px 24px;
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        margin-top: 10px;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    .landing-content {
+        padding: 10px 0;
+        gap: 15px;
+    }
+
+    .landing-text h1 {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .landing-text p {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+
+    .cta-button {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+    
+    .cta-wrapper {
+        margin-top: 10px;
+    }
+
+    .landing-image img {
+        max-width: 300px;
+        border-radius: 20px;
+    }
+    
+    .landing-image .social-proof {
+        margin-top: 8px;
+        max-width: 300px;
+        padding: 8px 10px;
+    }
+    
+    .social-proof {
+        gap: 4px;
+    }
+    
+    .rating {
+        font-size: 0.9rem;
+    }
+    
+    .social-proof p {
+        font-size: 0.85rem;
+    }
+
+    .thought {
+        padding: 5px 10px;
+        font-size: 10px;
+        border-radius: 15px;
+    }
+
+    .thought i {
+        font-size: 12px;
+        margin-right: 3px;
+    }
+
+    .footer-mini {
+        font-size: 0.8rem;
+        padding: 10px 0;
+    }
+
+    /* Ajustes para as bolhas de interação na seção Ideal Para */
+    .interaction-bubble.likes {
+        top: 5% !important;
+        left: 5% !important;
+        transform: translateX(0) !important;
+    }
+    
+    .interaction-bubble.comments {
+        top: 15% !important;
+        right: 5% !important;
+    }
+    
+    .interaction-bubble.shares {
+        bottom: 30% !important;
+        left: 5% !important;
+    }
+    
+    .interaction-bubble.followers {
+        bottom: 20% !important;
+        right: 5% !important;
+    }
+    
+    .interaction-bubble.audience {
+        top: 35% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+    
+    /* Diminuir o tamanho das bolhas em telas pequenas */
+    .interaction-bubble div {
+        padding: 5px 10px !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .landing-content {
+        padding: 5px 0;
+        gap: 10px;
+    }
+    
+    .landing-text h1 {
+        font-size: 1.8rem;
+        margin-bottom: 6px;
+    }
+    
+    .landing-text p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .cta-wrapper {
+        margin-top: 8px;
+    }
+    
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .landing-image img {
+        max-width: 250px;
+    }
+    
+    .landing-image .social-proof {
+        margin-top: 6px;
+        max-width: 250px;
+        padding: 6px 8px;
+    }
+    
+    .rating {
+        font-size: 0.8rem;
+    }
+    
+    .social-proof p {
+        font-size: 0.8rem;
+    }
+
+    .thought {
+        transform: scale(0.7);
+    }
+    
+    .footer-mini {
+        padding: 8px 0;
+        font-size: 0.75rem;
+    }
+}
+
+/* Para telas muito grandes */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .landing-text h1 {
+        font-size: 4rem;
+    }
+
+    .landing-text p {
+        font-size: 1.4rem;
+    }
+
+    .landing-image img {
+        max-width: 550px;
+    }
+}
+
+/* Melhorias de acessibilidade para toque */
+@media (hover: none) {
+    .cta-button:hover {
+        transform: none;
+    }
+
+    .cta-button:active {
+        transform: translateY(2px);
+    }
+
+    .landing-image:hover img {
+        transform: none;
+    }
+}
+
+/* Fix para iPhone notch */
+@supports (padding: max(0px)) {
+    .container {
+        padding-left: max(20px, env(safe-area-inset-left));
+        padding-right: max(20px, env(safe-area-inset-right));
+    }
+}
+
+/* Ajustes para os bubbles em versão mobile */
+@media (max-width: 576px) {
+    .thought-bubbles {
+        /* Tornar os bubbles mais visíveis */
+        transform: scale(0.7);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+    }
+    
+    /* Melhorar a exibição dos bubbles para que não saiam da área visível */
+    .thought.likes {
+        top: 10%;
+        left: 15%;
+    }
+    
+    .thought.comments {
+        top: 20%;
+        right: 10%;
+    }
+    
+    .thought.shares {
+        bottom: 25%;
+        left: 10%;
+    }
+    
+    .thought.followers {
+        bottom: 15%;
+        right: 20%;
+    }
+    
+    .thought.audience {
+        top: 40%;
+        left: 30%;
+    }
+}
+
+/* Estilos para as bolhas de interação em todas as seções */
+.landing-image {
+    margin: 60px auto 0;
+    position: relative;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+}
+
+.interaction-bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+.interaction-bubble {
+    position: absolute;
+    z-index: 10;
+}
+
+.interaction-bubble div {
+    background: linear-gradient(135deg, #1877f2, #166fe5);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    animation: floatThought 3s ease-in-out infinite;
+}
+
+.interaction-bubble.likes {
+    top: 10%;
+    left: 0;
+    transform: translateX(-20%);
+}
+
+.interaction-bubble.likes div {
+    background: linear-gradient(135deg, #8bc34a, #689f38);
+    animation-delay: 0.5s;
+}
+
+.interaction-bubble.comments {
+    top: 20%;
+    right: -10px;
+}
+
+.interaction-bubble.comments div {
+    background: linear-gradient(135deg, #ffc107, #ffa000);
+    animation-delay: 1s;
+}
+
+.interaction-bubble.shares {
+    bottom: 25%;
+    left: 0;
+}
+
+.interaction-bubble.shares div {
+    background: linear-gradient(135deg, #03a9f4, #0288d1);
+    animation-delay: 1.5s;
+}
+
+.interaction-bubble.followers {
+    bottom: 15%;
+    right: 0;
+}
+
+.interaction-bubble.followers div {
+    background: linear-gradient(135deg, #ff5722, #e64a19);
+    animation-delay: 2s;
+}
+
+.interaction-bubble.audience {
+    top: 40%;
+    left: 30%;
+}
+
+.interaction-bubble.audience div {
+    background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+    animation-delay: 2.5s;
+}
+
+.interaction-bubble i {
+    margin-right: 8px;
+}
+
+.social-proof {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.social-proof .rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.social-proof .rating i {
+    color: #FFD700;
+    margin: 0 2px;
+}
+
+.social-proof .rating span {
+    color: white;
+    margin-left: 5px;
+    font-weight: 600;
+}
+
+.social-proof p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Ajustes para mobile */
+@media (max-width: 576px) {
+    .interaction-bubble.likes {
+        top: 5% !important;
+        left: 5% !important;
+        transform: translateX(0) !important;
+    }
+    
+    .interaction-bubble.comments {
+        top: 15% !important;
+        right: 5% !important;
+    }
+    
+    .interaction-bubble.shares {
+        bottom: 30% !important;
+        left: 5% !important;
+    }
+    
+    .interaction-bubble.followers {
+        bottom: 20% !important;
+        right: 5% !important;
+    }
+    
+    .interaction-bubble.audience {
+        top: 35% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+    
+    .interaction-bubble div {
+        padding: 5px 10px !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* Ajustes adicionais para melhor responsividade em dispositivos móveis */
+@media (max-width: 768px) {
+    /* Container mais ajustado */
+    .container {
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    
+    /* Reset completo para garantir a ordem correta */
+    .landing-content {
+        display: flex;
+        flex-direction: column !important; /* Força a direção da coluna */
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    /* Garante que o texto sempre fique acima da imagem */
+    .landing-text {
+        width: 100%;
+        order: 1 !important; /* Força a ordem */
+        padding: 0 !important;
+        margin: 0 0 10px 0 !important;
+        max-width: 100% !important;
+    }
+    
+    /* Garante que a imagem sempre fique depois do texto */
+    .landing-image {
+        width: 100%;
+        order: 2 !important; /* Força a ordem */
+        margin: 10px auto !important;
+        padding: 0 !important;
+        max-width: 90% !important;
+    }
+    
+    /* Ajusta imagens para evitar problemas */
+    .landing-image img {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+        object-fit: cover;
+        aspect-ratio: 16 / 9;
+        border-radius: 15px;
+    }
+    
+    /* Centraliza os botões */
+    .cta-wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 15px auto 5px;
+        width: 100%;
+    }
+    
+    /* Ajuste do tamanho da fonte para títulos */
+    .landing-text h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+    
+    /* Melhorar espaçamento entre seções */
+    .section {
+        padding: 40px 0;
+    }
+    
+    /* Ajuste das bolhas de interação */
+    .interaction-bubbles {
+        pointer-events: none !important;
+        transform: scale(0.85);
+    }
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 576px) {
+    .landing-hero {
+        min-height: auto;
+        padding-bottom: 20px;
+    }
+    
+    .landing-text h1 {
+        font-size: 1.7rem;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+    
+    .landing-text p, .section-header p {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+    
+    .landing-image, .landing-image img {
+        max-width: 85%;
+        margin: 0 auto;
+    }
+    
+    /* Social proof mais compacto */
+    .social-proof {
+        flex-direction: column;
+        gap: 5px;
+        padding: 8px 10px;
+        margin-top: 10px;
+    }
+    
+    /* Reduzindo tamanho das bolhas de interação */
+    .interaction-bubbles {
+        transform: scale(0.7);
+    }
+    
+    /* Ajuste das grids para telas pequenas */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* Espaçamento reduzido da seção */
+    .section {
+        padding: 25px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 25px;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .landing-hero {
+        padding-bottom: 20px;
+    }
+    
+    .landing-text h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .section-header h2 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+    
+    .landing-text p, .section-header p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .landing-image img {
+        max-height: 240px;
+        border-radius: 15px;
+    }
+    
+    /* Ajustar logo para telas pequenas */
+    .logo {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .logo img {
+        height: 30px;
+    }
+    
+    /* Garantir que CTAs fiquem bem visíveis */
+    .cta-button {
+        display: inline-block;
+        width: auto;
+        max-width: 100%;
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+    
+    /* Seção mais compacta */
+    .section {
+        padding: 20px 0;
+    }
+    
+    /* Ajuste cards */
+    .feature-card {
+        padding: 15px;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Evitar overflow oculto em dispositivos pequenos */
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+/* Garantir que imagens não sejam cortadas */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Ajustes para os botões de CTA */
+.cta-button {
+    z-index: 20;
+    position: relative;
+}
+
+/* Garantir que as bolhas de interação não atrapalhem */
+.interaction-bubbles, .interaction-bubble, .thought-bubbles, .thought {
+    pointer-events: none;
+}
+
+/* Melhorias para estrutura da landing */
+.landing-content {
+    gap: 20px;
+}
+
+@media (max-width: 576px) {
+    .landing-content {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .landing-content {
+        gap: 10px;
+    }
+}
+
+/* Melhor comportamento em dispositivos móveis */
+@media (hover: none) {
+    .feature-card:hover, .landing-image:hover img {
+        transform: none !important;
+    }
+    
+    .feature-card:active, .cta-button:active {
+        transform: translateY(2px);
+    }
+}
+
+/* Melhorias para o footer em dispositivos móveis */
+@media (max-width: 576px) {
+    .footer-mini > div > div {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+/* Espaçamento ajustado para seções */
+#cta-final {
+    padding: 60px 0 !important;
+}
+
+@media (max-width: 576px) {
+    #cta-final {
+        padding: 40px 0 !important;
+    }
+    
+    #cta-final h2 {
+        font-size: 2rem !important;
+    }
+    
+    #cta-final p {
+        font-size: 1rem !important;
+    }
+}
+
+/* Ajuste para reduzir espaçamentos gerais */
+.section {
+    padding: 8px 0 !important; /* Redução do padding padrão de 80px para 40px */
+}
+
+.section-header {
+    margin-bottom: 30px !important; /* Redução do margin-bottom de 50px para 30px */
+}
+
+.features-grid {
+    gap: 20px !important; /* Redução de 30px para 20px */
+    margin-top: 25px !important; /* Redução de 40px para 25px */
+}
+
+.landing-image {
+    margin: 30px auto 0 !important; /* Redução de 60px para 30px */
+}
+
+.social-proof {
+    margin-top: 10px !important; /* Redução de 15px/20px para 10px */
+    padding: 10px 15px !important; /* Redução de 15px 20px para 10px 15px */
+}
+
+.cta-wrapper {
+    margin-top: 15px !important; /* Redução de 20px para 15px */
+}
+
+.landing-text p {
+    margin-bottom: 15px !important; /* Redução de 25px para 15px */
+}
+
+.landing-text h1 {
+    margin-bottom: 10px !important; /* Redução de 15px para 10px */
+}
+
+.feature-card {
+    padding: 20px !important; /* Redução de 25px para 20px */
+}
+
+.feature-card i {
+    margin-bottom: 10px !important; /* Redução de 15px para 10px */
+}
+
+/* Reduzir espaçamento entre as bolhas de interação */
+.interaction-bubble.likes {
+    top: 8%;
+}
+.interaction-bubble.comments {
+    top: 18%;
+}
+.interaction-bubble.audience {
+    top: 38%;
+}
+
+/* Reduzir espaçamento adicional para dispositivos móveis */
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 0 !important; /* Redução de 40px para 30px */
+    }
+    
+    .landing-content {
+        gap: 10px !important; /* Redução de 15px ou 20px para 10px */
+        padding: 5px 0 !important; /* Redução de 10px para 5px */
+    }
+    
+    .landing-text {
+        margin-bottom: 5px !important; /* Redução de 10px para 5px */
+    }
+    
+    .landing-image {
+        margin: 5px auto !important; /* Redução de 10px para 5px */
+    }
+    
+    .section-header {
+        margin-bottom: 20px !important; /* Redução de 25px ou 30px para 20px */
+    }
+    
+    /* Ajustar espaçamento entre elementos na versão mobile */
+    .cta-wrapper[style*="margin-top: 40px"] {
+        margin-top: 20px !important; /* Redução dos CTAs com margin de 40px para 20px */
+    }
+}
+
+@media (max-width: 576px) {
+    .section {
+        padding: 20px 0 !important; /* Ainda mais compacto para telas pequenas */
+    }
+    
+    .section-header {
+        margin-bottom: 15px !important;
+    }
+    
+    .landing-text h1 {
+        margin-bottom: 8px !important;
+    }
+    
+    .landing-text p {
+        margin-bottom: 8px !important;
+    }
+    
+    .cta-wrapper {
+        margin-top: 10px !important;
+    }
+    
+    .features-grid {
+        gap: 15px !important;
+        margin-top: 15px !important;
+    }
+    
+    /* Reduzir ainda mais para o CTA final */
+    #cta-final {
+        padding: 30px 0 !important; /* Redução de 40px para 30px */
+    }
+    
+    #cta-final h2 {
+        margin-bottom: 10px !important;
+    }
+    
+    #cta-final p {
+        margin-bottom: 15px !important;
+    }
+}
+
+/* Reduzir espaços no footer */
+.footer-mini {
+    padding: 8px 0 !important;
+}
+
+/* Ajuste para o espaçamento entre seções que usam divs com estilos inline */
+[style*="margin-top: 50px"] {
+    margin-top: 30px !important;
+}
+
+[style*="margin-bottom: 20px"] {
+    margin-bottom: 15px !important;
+}
+
+[style*="margin-bottom: 15px"] {
+    margin-bottom: 10px !important;
+}
+
+/* Ajustes para o FAQ */
+[style*="margin-top: 50px;"] {
+    margin-top: 25px !important;
+}
+
+[style*="margin-bottom: 50px"] {
+    margin-bottom: 25px !important;
+}
+
+/* Ajustando os espaçamentos globais para deixar elementos mais juntos */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+    margin: 5px 0;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.25);
+    padding: 12px;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+</style>
+<body>
+    <!-- Hero Section - Primeira Dobra -->
+    <section class="landing-hero">
+        <div class="container">
+            <div class="logo">
+                <img src="https://seguirplay.com/web_assets/img/logo.png" alt="Seguir Play Logo">
+            </div>
+            
+            <div class="landing-content">
+                <div class="landing-text">
+                    <h1>Mais alcance, mais interações, mais relevância para sua marca no Facebook.</h1>
+                    <p>Potencialize sua presença com estratégias seguras, direcionadas e eficazes para atrair mais atenção ao seu conteúdo.</p>
+                    
+                    <div class="cta-wrapper">
+                        <a href="https://seguirplay.com/" class="cta-button">QUERO AMPLIAR MINHA PRESENÇA NO FACEBOOK</a>
+                    </div>
+                </div>
+                
+                <div class="landing-image">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Pessoa sorridente usando Facebook">
+                    
+                    <div class="interaction-bubbles">
+                        <div class="interaction-bubble likes">
+                            <div>
+                                <i class="fas fa-thumbs-up"></i>
+                                <span>25K</span>
+                            </div>
+                        </div>
+                        <div class="interaction-bubble comments">
+                            <div>
+                                <i class="fas fa-comment"></i>
+                                <span>3.2K</span>
+                            </div>
+                        </div>
+                        <div class="interaction-bubble shares">
+                            <div>
+                                <i class="fas fa-share"></i>
+                                <span>1.8K</span>
+                            </div>
+                        </div>
+                        <div class="interaction-bubble followers">
+                            <div>
+                                <i class="fas fa-user-plus"></i>
+                                <span>+5K</span>
+                            </div>
+                        </div>
+                        <div class="interaction-bubble audience">
+                            <div>
+                                <i class="fas fa-users"></i>
+                                <span>85K</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-proof">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>4.9/5</span>
+                        </div>
+                        <p>Mais de 8.500 usuários satisfeitos</p>
+                    </div>
+                </div>
+            </div>
+            
+    </section>
+
+    <!-- Seção 2 - O Que Fazemos Por Você -->
+    <section class="section" id="o-que-fazemos">
+        <div class="container">
+            <div class="section-header">
+                <h2>O que fazemos por você</h2>
+                <p>Você publica, nós maximizamos o alcance. Ajudamos marcas, criadores e empreendedores a se destacarem no Facebook por meio de ações que aumentam a entrega dos conteúdos e melhoram a percepção do público.</p>
+            </div>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 10px;">📱 Publicações alcançando mais pessoas</h3>
+                    <p style="margin-bottom: 15px; font-size: 1.05rem;">Aumente significativamente o alcance orgânico das suas publicações, fazendo seu conteúdo chegar a um público muito maior.</p>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-eye"></i>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Mais visibilidade</h3>
+                    <p style="margin-bottom: 15px; font-size: 1.05rem;">Aumentamos a exposição das suas páginas e postagens dentro da plataforma.</p>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-comments"></i>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Engajamento real</h3>
+                    <p style="margin-bottom: 15px; font-size: 1.05rem;">Trabalhamos com interações genuínas e segmentadas para seu conteúdo.</p>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Relevância orgânica</h3>
+                    <p style="margin-bottom: 15px; font-size: 1.05rem;">Aplicamos técnicas que impulsionam sua posição natural no feed dos usuários.</p>
+                </div>
+                
+                <div class="card">
+                    <i class="fas fa-award"></i>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 10px;">Otimização da autoridade</h3>
+                    <p style="margin-bottom: 15px; font-size: 1.05rem;">Melhoramos a percepção da sua marca ou perfil dentro do ecossistema do Facebook.</p>
+                </div>
+            </div>
+            
+            <div class="landing-image">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Pessoa feliz usando Facebook no celular">
+                
+                <div class="interaction-bubbles">
+                    <div class="interaction-bubble likes">
+                        <div>
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>30K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble comments">
+                        <div>
+                            <i class="fas fa-comment"></i>
+                            <span>4.5K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble shares">
+                        <div>
+                            <i class="fas fa-share"></i>
+                            <span>2.1K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble followers">
+                        <div>
+                            <i class="fas fa-user-plus"></i>
+                            <span>+7K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble audience">
+                        <div>
+                            <i class="fas fa-users"></i>
+                            <span>95K</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-proof">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.8/5</span>
+                    </div>
+                    <p>Resultados comprovados em milhares de páginas</p>
+                </div>
+            </div>
+            
+            <div class="cta-wrapper" style="text-align: center; margin-top: 40px;">
+                <a href="https://seguirplay.com/" class="cta-button">QUERO DESTACAR MEU CONTEÚDO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 3 - Como Funciona -->
+    <section class="section" id="como-funciona" style="background: linear-gradient(135deg, rgba(24, 119, 242, 0.05) 0%, rgba(13, 71, 161, 0.05) 100%);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como funciona</h2>
+                <p>Trabalhamos com inteligência de exibição e comportamento. Nos bastidores, aplicamos estratégias que conectam seus conteúdos com públicos reais e engajados, aumentando a chance de interação, comentários e compartilhamentos — tudo isso respeitando as regras da plataforma.</p>
+            </div>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-top: 50px;">
+                <div style="flex: 1; min-width: 300px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 30px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <div style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary-color);">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Entregas assistidas de postagens</h3>
+                    <p style="opacity: 0.9; line-height: 1.7;">Implementamos um sistema inteligente que auxilia o algoritmo do Facebook a distribuir seus conteúdos para pessoas com maior probabilidade de interesse.</p>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 30px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <div style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary-color);">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Amplificação de visibilidade</h3>
+                    <p style="opacity: 0.9; line-height: 1.7;">Utilizamos redes segmentadas para aumentar a exposição do seu conteúdo a um público mais qualificado, promovendo maior alcance.</p>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px; background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 30px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <div style="font-size: 2.5rem; margin-bottom: 20px; color: var(--primary-color);">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 15px;">Otimização contínua</h3>
+                    <p style="opacity: 0.9; line-height: 1.7;">Analisamos constantemente o desempenho de suas publicações para ajustar nossa estratégia e maximizar os resultados.</p>
+                </div>
+            </div>
+            
+            <div class="landing-image">
+                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Pessoa compartilhando conteúdo no Facebook">
+                
+                <div class="interaction-bubbles">
+                    <div class="interaction-bubble likes">
+                        <div>
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>32K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble comments">
+                        <div>
+                            <i class="fas fa-comment"></i>
+                            <span>5.7K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble shares">
+                        <div>
+                            <i class="fas fa-share"></i>
+                            <span>3.9K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble followers">
+                        <div>
+                            <i class="fas fa-user-plus"></i>
+                            <span>+9K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble audience">
+                        <div>
+                            <i class="fas fa-users"></i>
+                            <span>110K</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-proof">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9/5</span>
+                    </div>
+                    <p>Processos otimizados e totalmente seguros</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 4 - Ideal Para... -->
+    <section class="section" id="ideal-para">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ideal para...</h2>
+                <p>Nossa solução foi desenvolvida para atender diversos tipos de perfis e necessidades no Facebook, proporcionando resultados reais para cada caso específico.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 40px;">
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-store" style="font-size: 2rem; margin-bottom: 15px; color: var(--secondary-color);"></i>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Marcas que querem mais engajamento</h3>
+                    <p style="opacity: 0.8; line-height: 1.7;">Ideal para empresas que desejam aumentar as interações com suas publicações e fortalecer o relacionamento com seu público.</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-map-marker-alt" style="font-size: 2rem; margin-bottom: 15px; color: var(--secondary-color);"></i>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Negócios locais</h3>
+                    <p style="opacity: 0.8; line-height: 1.7;">Perfeito para empreendimentos que precisam se destacar no feed da comunidade local e aumentar sua visibilidade na região.</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-paint-brush" style="font-size: 2rem; margin-bottom: 15px; color: var(--secondary-color);"></i>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Criadores de conteúdo</h3>
+                    <p style="opacity: 0.8; line-height: 1.7;">Essencial para criadores que desejam aumentar a relevância de suas postagens e expandir seu alcance na plataforma.</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-chart-pie" style="font-size: 2rem; margin-bottom: 15px; color: var(--secondary-color);"></i>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Páginas estagnadas</h3>
+                    <p style="opacity: 0.8; line-height: 1.7;">Solução eficaz para páginas que estão estagnadas e precisam voltar a crescer, recuperando sua visibilidade.</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-bullseye" style="font-size: 2rem; margin-bottom: 15px; color: var(--secondary-color);"></i>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Campanhas específicas</h3>
+                    <p style="opacity: 0.8; line-height: 1.7;">Perfeito para campanhas com foco em reconhecimento de marca e construção de autoridade no segmento.</p>
+                </div>
+            </div>
+            
+            <div class="landing-image">
+                <img src="https://images.pexels.com/photos/7014337/pexels-photo-7014337.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Pessoa usando Facebook para negócios">
+                
+                <div class="interaction-bubbles">
+                    <div class="interaction-bubble likes">
+                        <div>
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>42K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble comments">
+                        <div>
+                            <i class="fas fa-comment"></i>
+                            <span>6.3K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble shares">
+                        <div>
+                            <i class="fas fa-share"></i>
+                            <span>4.1K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble followers">
+                        <div>
+                            <i class="fas fa-user-plus"></i>
+                            <span>+12K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble audience">
+                        <div>
+                            <i class="fas fa-users"></i>
+                            <span>135K</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-proof">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9/5</span>
+                    </div>
+                    <p>Solução para todos os tipos de perfil e página</p>
+                </div>
+            </div>
+            
+            <div class="cta-wrapper" style="text-align: center; margin-top: 40px;">
+                <a href="https://seguirplay.com/" class="cta-button">QUERO RESULTADOS PARA MEU NEGÓCIO</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 5 - Benefícios Reais -->
+    <section class="section" id="beneficios" style="background: linear-gradient(135deg, rgba(24, 119, 242, 0.05) 0%, rgba(13, 71, 161, 0.05) 100%);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Benefícios Reais</h2>
+                <p>Conheça os resultados concretos que nossas estratégias podem trazer para a sua presença no Facebook.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div style="display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <div style="margin-bottom: 20px;">
+                        <i class="fas fa-megaphone" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Publicações alcançando mais pessoas</h3>
+                    <p style="opacity: 0.9; line-height: 1.7; flex-grow: 1;">Aumente significativamente o alcance orgânico das suas publicações, fazendo seu conteúdo chegar a um público muito maior.</p>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <div style="margin-bottom: 20px;">
+                        <i class="fas fa-hands-helping" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Mais engajamento em postagens</h3>
+                    <p style="opacity: 0.9; line-height: 1.7; flex-grow: 1;">Obtenha mais curtidas, comentários e compartilhamentos em suas publicações estratégicas, aumentando a interação com seu público.</p>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <div style="margin-bottom: 20px;">
+                        <i class="fas fa-crown" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Reconhecimento da sua marca</h3>
+                    <p style="opacity: 0.9; line-height: 1.7; flex-grow: 1;">Fortaleça a percepção do seu projeto ou marca, construindo autoridade no segmento e aumentando o reconhecimento público.</p>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <div style="margin-bottom: 20px;">
+                        <i class="fas fa-sort-amount-up" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Melhor posicionamento no feed</h3>
+                    <p style="opacity: 0.9; line-height: 1.7; flex-grow: 1;">Conquiste mais espaço no feed dos seus seguidores, aumentando a frequência com que seu conteúdo é exibido para eles.</p>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <div style="margin-bottom: 20px;">
+                        <i class="fas fa-user-check" style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 15px;">Perfil mais atrativo</h3>
+                    <p style="opacity: 0.9; line-height: 1.7; flex-grow: 1;">Torne sua página ou perfil mais atrativo para novos visitantes, aumentando as chances de conversão em seguidores fiéis.</p>
+                </div>
+            </div>
+            
+            <div class="landing-image">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Equipe celebrando resultados">
+                
+                <div class="interaction-bubbles">
+                    <div class="interaction-bubble likes">
+                        <div>
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>48K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble comments">
+                        <div>
+                            <i class="fas fa-comment"></i>
+                            <span>7.2K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble shares">
+                        <div>
+                            <i class="fas fa-share"></i>
+                            <span>5.4K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble followers">
+                        <div>
+                            <i class="fas fa-user-plus"></i>
+                            <span>+15K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble audience">
+                        <div>
+                            <i class="fas fa-users"></i>
+                            <span>150K</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-proof">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>5.0/5</span>
+                    </div>
+                    <p>Benefícios comprovados por milhares de clientes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 6 - FAQ -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Perguntas Frequentes</h2>
+                <p>Tudo o que você precisa saber sobre nossa solução para impulsionar sua presença no Facebook.</p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 50px auto 0;">
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 15px; display: flex; align-items: center;">
+                        <i class="fas fa-ban" style="color: #ff5252; margin-right: 15px; font-size: 1.6rem;"></i>
+                        Isso fere as políticas do Facebook?
+                    </h3>
+                    <p style="opacity: 0.9; line-height: 1.7;">De forma alguma. Utilizamos métodos inteligentes e seguros que respeitam os limites da plataforma e priorizam a experiência do usuário. Nossa estratégia está alinhada com as diretrizes do Facebook e focada em otimizar sua presença orgânica.</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 15px; display: flex; align-items: center;">
+                        <i class="fas fa-shield-alt" style="color: #4caf50; margin-right: 15px; font-size: 1.6rem;"></i>
+                        Meu perfil ou página corre algum risco?
+                    </h3>
+                    <p style="opacity: 0.9; line-height: 1.7;">Não. Nossa atuação é baseada em estratégias seguras e adaptadas ao comportamento orgânico. Trabalhamos dentro dos limites aceitáveis da plataforma, garantindo a segurança e integridade da sua presença digital no Facebook.</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; margin-bottom: 20px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 15px; display: flex; align-items: center;">
+                        <i class="fas fa-chart-bar" style="color: #2196f3; margin-right: 15px; font-size: 1.6rem;"></i>
+                        É só para quem vende algo?
+                    </h3>
+                    <p style="opacity: 0.9; line-height: 1.7;">Não! Nossa solução serve para criadores de conteúdo, negócios, eventos, páginas pessoais... Qualquer pessoa ou marca que queira visibilidade no Facebook pode se beneficiar. Nosso foco é melhorar a entrega e relevância dos seus conteúdos, independentemente do seu objetivo na plataforma.</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 15px; display: flex; align-items: center;">
+                        <i class="fas fa-clock" style="color: #ff9800; margin-right: 15px; font-size: 1.6rem;"></i>
+                        Quanto tempo leva para ver resultados?
+                    </h3>
+                    <p style="opacity: 0.9; line-height: 1.7;">Os primeiros resultados já podem ser notados nos primeiros dias após a implementação da nossa estratégia, com aumento gradual ao longo do tempo. O crescimento sustentável é nossa prioridade, por isso trabalhamos para garantir resultados consistentes a médio e longo prazo.</p>
+                </div>
+            </div>
+            
+            <div class="landing-image">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" alt="Pessoa analisando métricas do Facebook">
+                
+                <div class="interaction-bubbles">
+                    <div class="interaction-bubble likes">
+                        <div>
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>35K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble comments">
+                        <div>
+                            <i class="fas fa-comment"></i>
+                            <span>6.8K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble shares">
+                        <div>
+                            <i class="fas fa-share"></i>
+                            <span>4.7K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble followers">
+                        <div>
+                            <i class="fas fa-user-plus"></i>
+                            <span>+11K</span>
+                        </div>
+                    </div>
+                    <div class="interaction-bubble audience">
+                        <div>
+                            <i class="fas fa-users"></i>
+                            <span>124K</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-proof">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>4.9/5</span>
+                    </div>
+                    <p>Estratégia 100% segura e eficaz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Final - CTA -->
+    <section class="section" id="cta-final" style="background: var(--facebook-gradient); padding: 100px 0;">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px; text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);">Sua página no Facebook pode (e deve) ir além</h2>
+                <p style="font-size: 1.4rem; margin-bottom: 30px; opacity: 0.95;">Aumente a visibilidade dos seus posts, melhore sua autoridade e ganhe espaço no feed de quem mais importa.</p>
+                <p style="font-size: 1.6rem; font-weight: 600; margin-bottom: 40px;">📲 Comece hoje mesmo, com segurança.</p>
+                
+                <div class="cta-wrapper">
+                    <a href="https://seguirplay.com/" class="cta-button" style="font-size: 1.4rem; padding: 20px 40px; background: white; color: var(--primary-color);">QUERO IMPULSIONAR MINHA PÁGINA NO FACEBOOK</a>
+                </div>
+                
+                <div style="margin-top: 50px; display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                    <div style="background: rgba(255, 255, 255, 0.2); padding: 15px 25px; border-radius: 50px; backdrop-filter: blur(10px);">
+                        <i class="fas fa-lock" style="margin-right: 8px;"></i> 100% Seguro
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.2); padding: 15px 25px; border-radius: 50px; backdrop-filter: blur(10px);">
+                        <i class="fas fa-check-circle" style="margin-right: 8px;"></i> Resultados garantidos
+                    </div>
+                    <div style="background: rgba(255, 255, 255, 0.2); padding: 15px 25px; border-radius: 50px; backdrop-filter: blur(10px);">
+                        <i class="fas fa-headset" style="margin-right: 8px;"></i> Suporte exclusivo
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-mini" style="background: var(--dark-bg); padding: 30px 0;">
+        <div class="container">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div>
+                    <img src="https://seguirplay.com/web_assets/img/logo.png" alt="Seguir Play Logo" style="height: 40px;">
+                </div>
+                <div>
+                    <p>&copy; 2025 Seguir Play. Todos os direitos reservados.</p>
+                </div>
+                <div>
+                    <a href="https://seguirplay.com/" style="margin-right: 15px;">Termos de Uso</a>
+                    <a href="https://seguirplay.com/">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adicionar o wrapper span aos botões para efeito de hover
+            document.querySelectorAll('.cta-button').forEach(button => {
+                // Verificar se o botão já tem um span
+                if (!button.querySelector('span')) {
+                    const buttonText = button.innerHTML;
+                    button.innerHTML = `<span>${buttonText}</span>`;
+                }
+            });
+            
+            // Animação suave de scroll para links internos
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
