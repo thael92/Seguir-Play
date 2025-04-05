@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +29,21 @@
             line-height: 1.6;
         }
 
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+
+
+
         .container {
             width: 90%;
             max-width: 1200px;
@@ -40,7 +56,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542751371-abadd798b93a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1542751371-abadd798b93a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
             background-size: cover;
             background-position: center;
         }
@@ -84,11 +100,81 @@
         .cta-button:hover {
             transform: scale(1.05);
         }
-        
+
+        .services-layout {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin: 40px 0;
+        }
+
+        .features-grid {
+            flex: 1;
+        }
+
+        .services-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .floating-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-wrapper {
+            width: 100%;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        @media (max-width: 1024px) {
+            .services-layout {
+                flex-direction: column;
+            }
+
+            .services-image {
+                text-align: center;
+            }
+        }
+
+        .features-grid3 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card3:nth-child(3) {
+            grid-column: 1 / 3;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        #como-funciona {
+            background-color: #0a0a0a;
+        }
+
+
+        @media (max-width: 768px) {
+            .features-grid3 {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card3:nth-child(3) {
+                grid-column: 1;
+                width: 100%;
+            }
+        }
+
+
+
 
         /* Seções de Conteúdo */
         .section {
-            padding: 80px 0;
+            padding: 10px 0;
             background: var(--dark-bg);
         }
 
@@ -110,8 +196,32 @@
             gap: 30px;
         }
 
+        .features-grid3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card3 {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card3:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card3 i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
         .feature-card {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             padding: 30px;
             border-radius: 10px;
             text-align: center;
@@ -128,92 +238,125 @@
             margin-bottom: 20px;
         }
 
+        .beneficiarios-image {
+            width: 100%;
+            max-width: 1200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #beneficiarios .services-layout {
+            gap: 60px;
+        }
+
+        @media (max-width: 1024px) {
+            .beneficiarios-image {
+                max-width: 100%;
+            }
+        }
+
+
         /* FAQ */
         .faq-item {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             margin-bottom: 20px;
             padding: 20px;
             border-radius: 10px;
         }
 
         .cta-final {
-        background: linear-gradient(45deg, #9146ff, #6441a5, #392e5c);
-        background-size: 200% 200%;
-        animation: gradient 15s ease infinite;
-        padding: 80px 0;
-    }
-
-    .cta-content {
-        text-align: center;
-        padding: 40px;
-        border-radius: 20px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-    }
-
-    .glow-text {
-        font-size: 3.5rem;
-        color: white;
-        text-shadow: 0 0 10px rgba(145, 70, 255, 0.8);
-        margin-bottom: 30px;
-    }
-
-    .pulse-box {
-        animation: pulse 2s infinite;
-    }
-
-    .cta-button-special {
-        display: inline-block;
-        padding: 20px 40px;
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: white;
-        background: linear-gradient(90deg, #9146ff, #6441a5);
-        border-radius: 50px;
-        text-decoration: none;
-        position: relative;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-        margin-top: 30px;
-    }
-
-    .cta-button-special:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 20px rgba(145, 70, 255, 0.5);
-    }
-
-    .shine {
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 50%;
-        height: 100%;
-        background: linear-gradient(
-            120deg,
-            transparent,
-            rgba(255, 255, 255, 0.3),
-            transparent
-        );
-        animation: shine 3s infinite;
-    }
-
-    @keyframes gradient {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-
-    @keyframes pulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.02); }
-        100% { transform: scale(1); }
-    }
-
-    @keyframes shine {
-        to {
-            left: 200%;
+            background: linear-gradient(45deg, #9146ff, #6441a5, #392e5c);
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+            padding: 80px 0;
         }
-    }
+
+        .cta-content {
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .glow-text {
+            font-size: 3.5rem;
+            color: white;
+            text-shadow: 0 0 10px rgba(145, 70, 255, 0.8);
+            margin-bottom: 30px;
+        }
+
+        .pulse-box {
+            animation: pulse 2s infinite;
+        }
+
+        .cta-button-special {
+            display: inline-block;
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(90deg, #9146ff, #6441a5);
+            border-radius: 50px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .cta-button-special:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(145, 70, 255, 0.5);
+        }
+
+        .shine {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.3),
+                    transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes shine {
+            to {
+                left: 200%;
+            }
+        }
 
         /* Responsividade */
         @media (max-width: 1024px) {
@@ -245,8 +388,89 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .hero-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-image {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+            }
+
+            .hero-img {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-img {
+                max-width: 100%;
+            }
+        }
+        /* Add these responsive styles to your existing CSS */
+@media (max-width: 768px) {
+    .glow-text {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+    
+    .cta-button-special {
+        padding: 15px 25px;
+        font-size: 1rem;
+        width: 90%;
+        max-width: 300px;
+        white-space: normal;
+        line-height: 1.4;
+    }
+    
+    .cta-content {
+        padding: 25px 15px;
+    }
+    
+    .pulse-box p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glow-text {
+        font-size: 1.8rem;
+    }
+    
+    .cta-button-special {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
+.site-footer {
+    background: var(--dark-bg);
+    padding: 20px 15px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 15px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+
     </style>
 </head>
+
 <body>
     <div class="header-container">
         <a href="https://www.seguirplay.com">
@@ -259,12 +483,14 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Chegue a mais espectadores e valorize sua presença na Twitch</h1>
-                    <p>Melhore o desempenho das suas transmissões ao vivo com técnicas seguras e direcionadas que ampliam sua visibilidade na plataforma.</p>
+                    <p>Melhore o desempenho das suas transmissões ao vivo com técnicas seguras e direcionadas que
+                        ampliam sua visibilidade na plataforma.</p>
                     <a href="https://seguirplay.com/" class="cta-button"> Quero aumentar meu alcance na Twitch</a>
                 </div>
                 <div class="hero-image">
-                    <img src="img/kawai.jpg" alt="Streamer na Twitch" style="width: 500px; border-radius: 10px;">
+                    <img src="img/kawai.jpg" alt="Streamer na Twitch" class="hero-img">
                 </div>
+
             </div>
         </div>
     </section>
@@ -300,7 +526,8 @@
                     </div>
                 </div>
                 <div class="services-image">
-                    <img src="img/streamer-setup.jpg" alt="Setup Profissional de Streamer" class="floating-image">
+                    <img src="img/Estratégica-para-Fortalecer-sua-Marca.jpg" alt="Setup Profissional de Streamer"
+                        class="floating-image">
                 </div>
             </div>
             <div class="cta-wrapper">
@@ -316,28 +543,34 @@
                 <h2>Como Funciona</h2>
                 <p>Estratégias inteligentes para impulsionar sua visibilidade</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-bullseye"></i>
-                    <h3>Estratégia Personalizada</h3>
-                    <p>Análise detalhada do seu conteúdo e público</p>
+            <div class="services-layout reverse">
+                <div class="services-image">
+                    <img src="img/Seguidores-Reais-é-Melhor-que-Bots.jpg" alt="Como Funciona" class="floating-image">
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-magic"></i>
-                    <h3>Otimização Inteligente</h3>
-                    <p>Técnicas para melhorar seu posicionamento</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-chart-pie"></i>
-                    <h3>Métricas em Tempo Real</h3>
-                    <p>Acompanhamento constante dos resultados</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Estratégia Personalizada</h3>
+                        <p>Análise detalhada do seu conteúdo e público</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-magic"></i>
+                        <h3>Otimização Inteligente</h3>
+                        <p>Técnicas para melhorar seu posicionamento</p>
+                    </div>
+                    <div class="feature-card3">
+                        <i class="fas fa-chart-pie"></i>
+                        <h3>Métricas em Tempo Real</h3>
+                        <p>Acompanhamento constante dos resultados</p>
+                    </div>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 40px;">
+            <div class="cta-wrapper">
                 <a href="https://www.seguirplay.com" class="cta-button">🎯 Criar Minha Estratégia</a>
             </div>
         </div>
     </section>
+
 
     <!-- Quem Pode se Beneficiar -->
     <section class="section" id="beneficiarios">
@@ -346,28 +579,34 @@
                 <h2>Quem Pode se Beneficiar</h2>
                 <p>Nossa solução é ideal para diversos perfis de streamers</p>
             </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <i class="fas fa-gamepad"></i>
-                    <h3>Streamers Iniciantes</h3>
-                    <p>Ganhe visibilidade desde o primeiro momento</p>
+            <div class="services-layout">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Streamers Iniciantes</h3>
+                        <p>Ganhe visibilidade desde o primeiro momento</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Canais em Crescimento</h3>
+                        <p>Acelere seu desenvolvimento na plataforma</p>
+                    </div>
+                    <div class="feature-card3">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Streamers Experientes</h3>
+                        <p>Potencialize ainda mais seus resultados</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Canais em Crescimento</h3>
-                    <p>Acelere seu desenvolvimento na plataforma</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Streamers Experientes</h3>
-                    <p>Potencialize ainda mais seus resultados</p>
+                <div class="services-image">
+                    <img src="img/logo-Streamers.jpg" alt="Beneficiarios" class="beneficiarios-image">
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 40px;">
+            <div class="cta-wrapper">
                 <a href="https://www.seguirplay.com" class="cta-button">🌟 Quero Fazer Parte</a>
             </div>
         </div>
     </section>
+
 
     <!-- FAQ -->
     <section class="section" id="faq">
@@ -408,9 +647,12 @@
             </div>
         </div>
     </section>
+    
 
-    <footer style="background: var(--dark-bg); padding: 20px 0; text-align: center;">
+    <footer class="site-footer">
         <p>© 2024 Seguir Play. Todos os direitos reservados.</p>
     </footer>
+    
 </body>
+
 </html>
